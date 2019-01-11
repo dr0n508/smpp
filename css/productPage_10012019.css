@@ -357,7 +357,7 @@
 }
 .bulks-pp h4 {
     margin: 0 0 20px 0;
-    font-size: 35px;
+    font-size: 32px;
     text-align: center;
     color: #575757;
 }
@@ -436,6 +436,10 @@
 
 .list-plan-advantages.mobile {
     display: none;
+}
+
+.wrapper-product-table {
+    margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 1020px) {
@@ -522,6 +526,15 @@
 }
 
 @media only screen and (max-width: 450px) {
+    .content-product-page h1 {
+        font-size: 34px;
+    }
+    .bulks-pp h4 {
+        font-size: 26px;
+    }
+    .bulks-pp p {
+        font-size: 16px;
+    }
     .content-product-page .descr {
         height: auto;
         min-height: auto;
