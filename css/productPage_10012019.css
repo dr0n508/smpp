@@ -1,4 +1,8 @@
 /*base*/
+
+.www.pp {
+    background-color: #f4f4f4;
+}
 .content-product-page.inner {
     width: 1020px;
     min-width: 1020px;
@@ -163,7 +167,7 @@
     line-height: 1;
     text-transform: uppercase;
     color: #232323;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     margin: 0 -5px 5px -5px;
     padding-bottom: 16px;
 }
