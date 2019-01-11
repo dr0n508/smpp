@@ -1,3 +1,4 @@
+/*base*/
 .content-product-page.inner {
     width: 1020px;
     min-width: 1020px;
@@ -13,6 +14,9 @@
 .content-product-page * {
     box-sizing: border-box;
 }
+
+
+/*buttons*/
 
 .content-product-page .btn-modal {
     cursor: pointer;
@@ -45,7 +49,6 @@
     font-size: 40px;
     color: #242424;
     margin-bottom: 22px;
-
 }
 
 .content-product-page .slogan {
@@ -65,7 +68,7 @@
     position: relative;
     margin-bottom: 10px;
     width: 100%;
-    min-width: 1020px;
+    /*min-width: 1020px;*/
     white-space: initial;
 }
 
@@ -109,7 +112,7 @@
 
 .content-product-page .features {
     color: #1d5a8f;
-    min-height: 50px;
+    min-height: 65px;
 }
 
 .content-product-page .features span {
@@ -162,7 +165,7 @@
     color: #232323;
     background-color: #f9f9f9;
     margin: 0 -5px 5px -5px;
-    padding-bottom: 30px;
+    padding-bottom: 16px;
 }
 
 .big-col-1 .sub-col .price,
@@ -203,6 +206,11 @@
     margin-bottom: 32px;
     line-height: 1;
 }
+.content-product-page .yellow-btn:hover {
+    background-color: #e8a814;
+}
+
+
 .content-product-page .yellow-btn span {
     font-size: 13px;
 }
@@ -247,15 +255,26 @@
 
 .content-product-page .vertical-block .license {
     background-color: #47a7e3;
-
 }
+.content-product-page .vertical-block .license:hover {
+    background-color: #4499d2;
+}
+
+
 .content-product-page .vertical-block .compare-alt {
     background-color: #fdb814;
 }
 
+.content-product-page .vertical-block .compare-alt:hover {
+    background-color: #e8a814;
+}
+
+
+
 .content-product-page .download-plan-btn,
 .content-product-page .by-plan-btn {
     position: absolute;
+    z-index: 99;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -273,12 +292,19 @@
 }
 
 .content-product-page .download-plan-btn {
-    background-color: #575757;
+    background-color: #7f7f7f;
+}
+.content-product-page .download-plan-btn:hover {
+    background-color: #646464;
 }
 
 .content-product-page .by-plan-btn {
     background-color: #47a7e3;
 }
+.content-product-page .by-plan-btn:hover {
+    background-color: #4499d2;
+}
+
 
 
 
@@ -348,6 +374,9 @@
     padding: 8px 20px;
     text-decoration: none;
 }
+.bulks-pp .lm-btn:hover {
+    background-color: #646464;
+}
 
 /*media*/
 
@@ -371,9 +400,18 @@
 .links-menu-table .license {
     background-color: #47a7e3;
 }
+.links-menu-table .license:hover {
+    background-color: #4499d2;
+}
 .links-menu-table .compare-alt {
     background-color: #fdb814;
 }
+
+.links-menu-table .compare-alt:hover{
+    background-color: #e8a814;
+}
+
+
 
 .hide-desktop {
     display: none;
@@ -401,24 +439,63 @@
         width: 100%;
         min-width: 300px !important;
     }
+    .product-table {
+        font-size: 13px;
+    }
+    .features-list {
+        margin-bottom: 150px;
+    }
+    .list-plan-advantages  {
+        padding: 40px 20px;
+    }
+    .content-product-page .list-plan-advantages li h3 {
+        font-size: 14px;
+    }
+    .content-product-page .list-plan-advantages li p {
+        font-size: 13px;
+    }
 
     .wrapper-product-table {
-        overflow: hidden;
-        overflow-x: scroll;
-        white-space: nowrap;
-        word-wrap: normal;
-        margin-bottom: 30px;
+        /*overflow: hidden;*/
+        /*overflow-x: scroll;*/
+        /*white-space: nowrap;*/
+        /*word-wrap: normal;*/
+        /*margin-bottom: 30px;*/
     }
 }
 
 @media only screen and (max-width: 768px) {
+    .product-table {
+        flex-wrap: wrap;
+    }
+    .big-col-1,
+    .big-col-2 {
+        width: 100%;
+    }
+    .content-product-page {
+        padding-top: 30px;
+
+    }
+
     .content-product-page h1,
     .content-product-page .slogan,
     .links-menu-table{
         text-align: center;
     }
+    .big-col-1 .sub-col .title,
+    .big-col-2 .sub-col .title {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
     .features-list {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+    }
+    .content-product-page .list-plan-advantages {
+        margin-bottom: 0;
+    }
+    .content-product-page .list-plan-advantages li {
+        padding: 10px;
+        /*margin-bottom: 0;*/
     }
     .list-plan-advantages.mobile {
         display: block;
@@ -435,7 +512,7 @@
         flex-wrap: wrap;
     }
     .bulks-pp .bulk-pp {
-        /*width: 100%;*/
+        width: 100%;
         margin-bottom: 20px;
     }
 }
@@ -450,14 +527,14 @@
     }
     .content-product-page .download-plan-btn,
     .content-product-page .by-plan-btn {
-        /*position: static;*/
-        /*left: auto;*/
-        /*transform: none;*/
+        position: static;
+        left: auto;
+        transform: none;
     }
     .big-col-1 .sub-col,
     .big-col-2 .sub-col {
-        /*width: 100%;*/
-        /*height: auto;*/
+        width: 100%;
+        height: auto;
 
     }
 }
