@@ -7,6 +7,11 @@
 .content-product-page {
     box-sizing: border-box;
     padding-top: 60px;
+    line-height: 1.2;
+}
+
+.content-product-page * {
+    box-sizing: border-box;
 }
 
 .content-product-page .btn-modal {
@@ -40,6 +45,7 @@
     font-size: 40px;
     color: #242424;
     margin-bottom: 22px;
+
 }
 
 .content-product-page .slogan {
@@ -49,33 +55,40 @@
     margin-bottom: 68px;
 }
 
+
+
+
 .product-table {
     display: flex;
     font-family: brandon_textlight, sans-serif;
     font-size: 15px;
     position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    min-width: 1020px;
+    white-space: initial;
 }
 
 .big-col-1 {
     width: 50%;
-    display: flex;
+    box-sizing: border-box;
 }
 
 .big-col-2 {
     width: 50%;
-    display: flex;
     position: relative;
-}
-
-.big-col-2 .row1, .big-col-2 .row3 {
-    display: flex;
+    box-sizing: border-box;
 }
 
 .big-col-1 .sub-col,
 .big-col-2 .sub-col {
+    box-sizing: border-box;
     width: 50%;
+    height: 100%;
+    float: left;
     text-align: center;
     padding: 0 10px;
+    margin-bottom: 30px;
 
 }
 
@@ -83,7 +96,7 @@
 .big-col-2 .sub-col .wrapper {
     background-color: white;
     height: 100%;
-    padding: 30px 5px;
+    padding: 0 5px 30px 5px;
     position: relative;
 
 }
@@ -136,7 +149,7 @@
     margin-bottom: 0;
 }
 
-.content-product-page .list-plan-advantages li .title {
+.content-product-page .list-plan-advantages li h3 {
     color: #0c5c8e;
 }
 
@@ -144,15 +157,18 @@
 .big-col-2 .sub-col .title {
     font-family: 'brandon_textlight', sans-serif;
     font-size: 23px;
+    line-height: 1;
     text-transform: uppercase;
     color: #232323;
-    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    margin: 0 -5px 5px -5px;
+    padding-bottom: 30px;
 }
 
 .big-col-1 .sub-col .price,
 .big-col-2 .sub-col .price {
     min-height: 50px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     font-family: 'brandon_textregular', sans-serif;
     font-size: 34px;
     text-transform: uppercase;
@@ -193,7 +209,7 @@
 
 .features-list {
     padding: 0;
-    margin-bottom: 40px;
+    margin-bottom: 120px;
 }
 
 .features-list li {
@@ -238,8 +254,7 @@
 }
 
 .content-product-page .download-plan-btn,
-.content-product-page .by-plan-btn
-{
+.content-product-page .by-plan-btn {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -248,11 +263,11 @@
     font-family: 'google_sansmedium', sans-serif;
     font-size: 16px;
     min-width: 100px;
+    width: 80%;
     text-align: center;
     color: white;
-    padding: 10px 30px;
+    padding: 10px 10px;
     text-decoration: none;
-
     border-radius: 30px;
     text-transform: uppercase;
 }
@@ -377,14 +392,42 @@
     }
 }
 
+.list-plan-advantages.mobile {
+    display: none;
+}
+
 @media only screen and (max-width: 1020px) {
     .content-product-page.inner {
         width: 100%;
         min-width: 300px !important;
     }
+
+    .wrapper-product-table {
+        overflow: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
+        word-wrap: normal;
+        margin-bottom: 30px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
+    .content-product-page h1,
+    .content-product-page .slogan,
+    .links-menu-table{
+        text-align: center;
+    }
+    .features-list {
+        margin-bottom: 50px;
+    }
+    .list-plan-advantages.mobile {
+        display: block;
+        padding: 5px;
+        position: relative;
+    }
+    .list-plan-advantages.desktop {
+        display: none;
+    }
     .links-menu-table a {
         width: 250px;
     }
@@ -392,7 +435,29 @@
         flex-wrap: wrap;
     }
     .bulks-pp .bulk-pp {
-        width: 100%;
+        /*width: 100%;*/
         margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .content-product-page .descr {
+        height: auto;
+        min-height: auto;
+    }
+    .content-product-page .features {
+        min-height: auto;
+    }
+    .content-product-page .download-plan-btn,
+    .content-product-page .by-plan-btn {
+        /*position: static;*/
+        /*left: auto;*/
+        /*transform: none;*/
+    }
+    .big-col-1 .sub-col,
+    .big-col-2 .sub-col {
+        /*width: 100%;*/
+        /*height: auto;*/
+
     }
 }
